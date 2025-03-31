@@ -1,5 +1,6 @@
 import React from 'react';
 import SocialLinks from './SocialLinks';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
@@ -51,14 +52,7 @@ export default function Home() {
             </p>
 
             {/* Call to Action Button */}
-            <a
-              href="https://your-portfolio-link.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-medium text-lg shadow-md transform transition hover:scale-105"
-            >
-              View My Work
-            </a>
+            
           </div>
         </div>
       </div>
