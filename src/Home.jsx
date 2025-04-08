@@ -4,79 +4,151 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800 text-white px-6 py-30">
-      <h1 className="w-full text-2xl md:text-3xl font-mono font-semibold mb-3 text-left bg-gray-900 text-blue-400 px-2 py-1 rounded-md border border-blue-600 shadow-md">
-        {"<> Aspiring Software Engineer </>"}
-      </h1>
+    <div className="min-h-screen mt-10 flex flex-col items-center justify-center bg-[#0d1117] text-[#c9d1d9] px-6 py-12">
+      {/* GitHub-style header with navigation bar */}
+      <div className="w-full max-w-6xl mb-8">
+        <div className="flex items-center justify-between bg-[#161b22] px-4 py-3 rounded-md border border-[#30363d] hover:border-[#58a6ff] transition-colors duration-300">
+          <h1 className="text-2xl md:text-3xl font-mono font-semibold text-[#58a6ff] flex items-center">
 
-      {/* Profile Image */}
-      <div className="w-full px-4 md:px-8 lg:px-20">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12 bg-gradient-to-r from-gray-800 via-gray-900 to-black p-8 rounded-2xl shadow-xl border border-gray-700">
+            <span className="mr-2">Keyboard</span>
+            <span className="text-[#f85149] font-bold">Warrior</span>
+            <span className="ml-2 text-sm text-[#8b949e] hidden md:inline">| Conquering code one keystroke at a time</span>
+          </h1>
 
-          {/* Profile Image */}
-          <div className="relative">
-            <div className="w-40 h-40 md:w-52 md:h-52 bg-gray-900 p-2 rounded-full border border-gray-700 shadow-lg shadow-blue-500/50 flex items-center justify-center">
-              <img
-                src="/images/my_image.jpeg"
-                alt="Profile"
-                className="w-full h-full rounded-full border-4 border-gray-600"
-              />
+          {/* Optional: animated cursor effect */}
+
+        </div>
+      </div>
+
+      <div className="w-full max-w-6xl">
+        <div className="flex flex-col md:flex-row gap-8 relative">
+
+          <div className="w-full md:w-1/3">
+            <div className="bg-[#161b22] p-6 rounded-xl border border-[#30363d] sticky top-4">
+
+              <div className="relative mb-4 mx-auto md:mx-0">
+                <div className="w-40 h-40 bg-[#0d1117] p-2 rounded-full border border-[#30363d] shadow-lg flex items-center justify-center">
+                  <img
+                    src="/images/my_image.jpeg"
+                    alt="Profile"
+                    className="w-full h-full rounded-full border-4 border-[#21262d]"
+                  />
+                </div>
+              </div>
+
+              {/* Name and status */}
+              <h2 className="text-2xl font-bold text-[#f0f6fc] mb-1 text-center md:text-left">
+                Kiran shivanand totager
+              </h2>
+              <h3 className="text-lg text-[#8b949e] mb-4 text-center md:text-left">
+                <a href="mailto:tskiran5114@gmail.com" className='flex justify-start gap-2'>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                  </svg>
+                  tskiran5114@gmail.com
+                </a>
+              </h3>
+              <h3 className="text-lg text-[#8b949e] mb-4 text-center md:text-left">
+                <a href="tel:+919019983058" className='flex justify-start gap-2'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                </svg>
+                  +919019983058
+                </a>
+              </h3>
+
+              {/* Status badge */}
+              <div className="flex items-center mb-4 text-sm text-[#8b949e] justify-center md:justify-start">
+                <span className="flex items-center">
+                  <span className="w-3 h-3 bg-[#3fb950] rounded-full mr-2"></span>
+                  Available for hire
+                </span>
+              </div>
+
+              {/* Bio */}
+              <p className="text-[#8b949e] text-sm mb-6 border-b border-[#30363d] pb-4">
+                👨‍💻 Computer Science & Engineering Student | Software Development Intern at L&T
+              </p>
+
+              {/* Stats */}
+
+              {/* Quick links - reduced for space */}
+              <div className="space-y-2 text-sm">
+                <a href="kiran_S_T_2025.pdf" className="flex items-center text-[#8b949e] hover:text-[#58a6ff]">
+                  <svg className="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M0 1.75A.75.75 0 01.75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0111.006 1h4.245a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75h-4.507a2.25 2.25 0 00-1.591.659l-.622.621a.75.75 0 01-1.06 0l-.622-.621A2.25 2.25 0 005.258 13H.75a.75.75 0 01-.75-.75V1.75z" />
+                  </svg>
+                  <span>Resume</span>
+                </a>
+
+              </div>
+
             </div>
-            <div className="absolute bottom-3 right-3 bg-blue-500 w-5 h-5 rounded-full border-2 border-gray-900"></div>
           </div>
 
-          {/* Text Content */}
-          <div className="max-w-2xl bg-gray-900 text-gray-300 font-mono p-6 rounded-lg border border-gray-700 shadow-lg shadow-blue-500/50 text-center md:text-left leading-relaxed tracking-wide">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              👨‍💻 Passionate Computer Science & Engineering Student
-            </h2>
-            <p className="text-base md:text-lg">
-              With a strong foundation in
-              <span className="text-blue-400 font-medium"> programming, data structures, and software development</span>,
-              I thrive on solving complex real-world challenges through
-              <span className="text-gray-400 font-medium"> efficient and scalable</span> coding solutions.
-            </p>
-            <p className="mt-4">
-              Proficient in
-              <span className="text-yellow-400 font-medium"> C, Java, Python, JavaScript, HTML, CSS, MySQL, and REST APIs</span>,
-              I am currently sharpening my expertise as a
-              <span className="text-red-400 font-medium"> Software Development Intern at L&T</span>,
-              working on real-world applications.
-            </p>
-            <p className="mt-4">
-              With a relentless drive for
-              <span className="text-purple-400 font-medium"> continuous learning and innovation</span>,
-              I aim to contribute my skills to impactful projects. Excited to
-              <span className="text-pink-400 font-medium"> collaborate, grow, and make a difference</span>
-              in the world of technology. 🌍✨
-            </p>
+          {/* Right content area */}
+          <div className="w-full md:w-2/3">
+            {/* README.md style section */}
+            <div className="bg-[#161b22] rounded-xl border border-[#30363d] mb-6 overflow-hidden">
+              <div className="flex items-center bg-[#0d1117] px-4 py-2 border-b border-[#30363d]">
+                <svg className="w-4 h-4 mr-2 text-[#8b949e]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M0 2.75C0 1.784.784 1 1.75 1H5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 00.2.1h6.75c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 15H1.75A1.75 1.75 0 010 13.25V2.75z" />
+                </svg>
+                <span className="text-[#8b949e] text-sm font-mono">README.md</span>
+              </div>
 
-            {/* Call to Action Button */}
-            
+              <div className="px-6 py-6 font-mono text-[#8b949e] leading-relaxed">
+  <h2 className="text-2xl md:text-3xl font-bold text-[#f0f6fc] mb-4">
+    👨‍💻 Software Development Intern | CSE Student at GEC MH Halli
+  </h2>
+  <p className="text-base mb-4">
+    Currently interning at
+    <span className="text-[#f85149] font-medium"> L&T Technology Services (PES)</span>,
+    where I’m gaining practical experience in building robust backend systems.
+    I’ve been working on
+    <span className="text-[#58a6ff] font-medium"> RESTful APIs, JWT authentication, session management, and role-based access control</span>,
+    while also exploring
+    <span className="text-[#58a6ff] font-medium"> frontend development using React.js</span>.
+  </p>
+  <p className="mb-4">
+    I am comfortable with
+    <span className="text-[#e3b341] font-medium"> Python, Java, C, JavaScript, HTML, CSS, MySQL</span>,
+    and have working knowledge of
+    <span className="text-[#e3b341] font-medium"> FastAPI and Docker</span>.
+    My favorite project was to create a
+    <span className="text-[#8b949e] font-medium"> face recognition-based attendance system</span>
+    using DeepFace and combine it with a real-time MySQL database.
+  </p>
+  <p className="mb-4">
+    I have a strong background in
+    <span className="text-[#d2a8ff] font-medium"> data structures, problem-solving, and software development principles</span>,
+    and have solved more than
+    <span className="text-[#d2a8ff] font-medium"> 50+ problems on LeetCode</span>
+    to strengthen my logic-crafting ability.
+  </p>
+  <p>
+    I'm a self-proclaimed
+    <span className="text-[#ff7b72] font-medium"> lifelong learner</span>,
+    and I love growing and being part of
+    <span className="text-[#ff7b72] font-medium"> significant tech innovations</span>.
+    Whether working in a team or on my own, I enjoy creating
+    <span className="text-[#ff7b72] font-medium"> ideas become functional solutions</span>
+    that have a real impact.
+  </p>
+</div>
+
+
+            </div>
+
+            {/* Pinned repositories section */}
+
+
+
           </div>
         </div>
       </div>
 
-
-      {/* Social Icons */}
-      {/* <div className="flex gap-6 text-3xl mt-6">
-        <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition transform hover:scale-110">
-          <FontAwesomeIcon icon={faGithub} />
-        </a>
-        <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition transform hover:scale-110">
-          <FontAwesomeIcon icon={faLinkedin} />
-        </a>
-        <a href="https://wa.me/your-number" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-600 transition transform hover:scale-110">
-          <FontAwesomeIcon icon={faWhatsapp} />
-        </a>
-        <a href="https://instagram.com/your-username" target="_blank" rel="noopener noreferrer" className="text-pink-500 hover:text-pink-700 transition transform hover:scale-110">
-          <FontAwesomeIcon icon={faInstagram} />
-        </a>
-      </div> */}
-     <SocialLinks/>
-
-      {/* Animated Button */}
-
+      {/* Social Links */}
+      <SocialLinks />
     </div>
   );
 }
