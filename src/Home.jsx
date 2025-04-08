@@ -1,8 +1,25 @@
 import React from 'react';
 import SocialLinks from './SocialLinks';
 import { Link } from 'react-router-dom';
+// import { useRef } from 'react';
+import { useRef, useState } from "react";
+
 
 export default function Home() {
+  const videoRef = useRef(null);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+
+  const handlePlay = () => {
+    setIsExpanded(true);
+    videoRef.current?.play();
+  };
+
+  const handleClose = () => {
+    setIsExpanded(false);
+    videoRef.current?.pause();
+  };
+
   return (
     <div className="min-h-screen mt-10 flex flex-col items-center justify-center bg-[#0d1117] text-[#c9d1d9] px-6 py-12">
       {/* GitHub-style header with navigation bar */}
@@ -26,15 +43,68 @@ export default function Home() {
           <div className="w-full md:w-1/3">
             <div className="bg-[#161b22] p-6 rounded-xl border border-[#30363d] sticky top-4">
 
-              <div className="relative mb-4 mx-auto md:mx-0">
-                <div className="w-40 h-40 bg-[#0d1117] p-2 rounded-full border border-[#30363d] shadow-lg flex items-center justify-center">
-                  <img
-                    src="/images/my_image.jpeg"
-                    alt="Profile"
-                    className="w-full h-full rounded-full border-4 border-[#21262d]"
-                  />
-                </div>
-              </div>
+
+
+           
+        <div
+          className="relative w-58 h-58 rounded-full overflow-hidden border-4 border-white shadow-xl cursor-pointer transition-transform hover:scale-105 hover:shadow-2xl group"
+          onClick={handlePlay}
+        >
+          {/* <video
+            ref={videoRef}
+            className="w-full h-full object-cover rounded-full"
+            muted
+            playsInline
+            poster="./images/my_image.jpeg"
+          >
+            <source src="portfolio.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video> */}
+          <img src="./images/my_image.jpeg" alt="" />
+
+          {/* Play Icon Overlay on Hover */}
+          <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity rounded-full">            <svg
+              className="w-12 h-12 text-white"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M6 4l12 6-12 6V4z" />
+            </svg>
+          </div>
+        </div>
+      
+
+      {/* Fullscreen Modal */}
+      {isExpanded && (
+  <div
+    className="fixed inset-0 bg-[#0d1117]/90 backdrop-blur-sm flex items-start justify-center z-50 pt-24 px-6"
+    onClick={handleClose}
+  >
+    <div
+      className="rounded-xl bg-[#161b22] border border-[#30363d] shadow-lg p-3"
+      onClick={(e) => e.stopPropagation()} // Prevent closing on video click
+    >
+      <video
+        ref={videoRef}
+        className="w-[90vw] max-w-4xl max-h-[80vh] rounded-lg border border-[#21262d] shadow-[0_0_0_1px_#30363d] outline-none"
+        controls
+        autoPlay
+      >
+        <source src="portfolio.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+)}
+
+
+
+
+
+              
+
+
+
 
               {/* Name and status */}
               <h2 className="text-2xl font-bold text-[#f0f6fc] mb-1 text-center md:text-left">
@@ -97,44 +167,44 @@ export default function Home() {
               </div>
 
               <div className="px-6 py-6 font-mono text-[#8b949e] leading-relaxed">
-  <h2 className="text-2xl md:text-3xl font-bold text-[#f0f6fc] mb-4">
-    👨‍💻 Software Development Intern | CSE Student at GEC MH Halli
-  </h2>
-  <p className="text-base mb-4">
-    Currently interning at
-    <span className="text-[#f85149] font-medium"> L&T Technology Services (PES)</span>,
-    where I’m gaining practical experience in building robust backend systems.
-    I’ve been working on
-    <span className="text-[#58a6ff] font-medium"> RESTful APIs, JWT authentication, session management, and role-based access control</span>,
-    while also exploring
-    <span className="text-[#58a6ff] font-medium"> frontend development using React.js</span>.
-  </p>
-  <p className="mb-4">
-    I am comfortable with
-    <span className="text-[#e3b341] font-medium"> Python, Java, C, JavaScript, HTML, CSS, MySQL</span>,
-    and have working knowledge of
-    <span className="text-[#e3b341] font-medium"> FastAPI and Docker</span>.
-    My favorite project was to create a
-    <span className="text-[#8b949e] font-medium"> face recognition-based attendance system</span>
-    using DeepFace and combine it with a real-time MySQL database.
-  </p>
-  <p className="mb-4">
-    I have a strong background in
-    <span className="text-[#d2a8ff] font-medium"> data structures, problem-solving, and software development principles</span>,
-    and have solved more than
-    <span className="text-[#d2a8ff] font-medium"> 50+ problems on LeetCode</span>
-    to strengthen my logic-crafting ability.
-  </p>
-  <p>
-    I'm a self-proclaimed
-    <span className="text-[#ff7b72] font-medium"> lifelong learner</span>,
-    and I love growing and being part of
-    <span className="text-[#ff7b72] font-medium"> significant tech innovations</span>.
-    Whether working in a team or on my own, I enjoy creating
-    <span className="text-[#ff7b72] font-medium"> ideas become functional solutions</span>
-    that have a real impact.
-  </p>
-</div>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#f0f6fc] mb-4">
+                  👨‍💻 Software Development Intern | CSE Student at GEC MH Halli
+                </h2>
+                <p className="text-base mb-4">
+                  Currently interning at
+                  <span className="text-[#f85149] font-medium"> L&T Technology Services (PES)</span>,
+                  where I’m gaining practical experience in building robust backend systems.
+                  I’ve been working on
+                  <span className="text-[#58a6ff] font-medium"> RESTful APIs, JWT authentication, session management, and role-based access control</span>,
+                  while also exploring
+                  <span className="text-[#58a6ff] font-medium"> frontend development using React.js</span>.
+                </p>
+                <p className="mb-4">
+                  I am comfortable with
+                  <span className="text-[#e3b341] font-medium"> Python, Java, C, JavaScript, HTML, CSS, MySQL</span>,
+                  and have working knowledge of
+                  <span className="text-[#e3b341] font-medium"> FastAPI and Docker</span>.
+                  My favorite project was to create a
+                  <span className="text-[#8b949e] font-medium"> face recognition-based attendance system</span>
+                  using DeepFace and combine it with a real-time MySQL database.
+                </p>
+                <p className="mb-4">
+                  I have a strong background in
+                  <span className="text-[#d2a8ff] font-medium"> data structures, problem-solving, and software development principles</span>,
+                  and have solved more than
+                  <span className="text-[#d2a8ff] font-medium"> 50+ problems on LeetCode</span>
+                  to strengthen my logic-crafting ability.
+                </p>
+                <p>
+                  I'm a self-proclaimed
+                  <span className="text-[#ff7b72] font-medium"> lifelong learner</span>,
+                  and I love growing and being part of
+                  <span className="text-[#ff7b72] font-medium"> significant tech innovations</span>.
+                  Whether working in a team or on my own, I enjoy creating
+                  <span className="text-[#ff7b72] font-medium"> ideas become functional solutions</span>
+                  that have a real impact.
+                </p>
+              </div>
 
 
             </div>

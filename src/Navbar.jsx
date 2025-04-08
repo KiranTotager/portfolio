@@ -124,7 +124,7 @@ export default function Navbar() {
             <Link to="/">Home</Link>
           </li>
           <li className="px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-300 cursor-pointer">
-            <Link to="/education">Education&skills</Link>
+            <Link to="/education">Education & skills</Link>
           </li>
           <li className="px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-300 cursor-pointer">
             <Link to="/projects">Projects</Link>
