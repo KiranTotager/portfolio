@@ -11,8 +11,11 @@ export default function Education() {
         "DSA", "Machine Learning", "tailwind css"
     ];
     let Tools = [
-        "Git","GitHub","Postman","docker","jupyter notebook","Linux","pycharm"
+        "Git", "GitHub", "Postman", "docker", "jupyter notebook", "Linux", "pycharm"
     ]
+    let certificates = [
+        "core java-udemy", "datastructures-NPTEL", "data sceince-internshala"
+    ];
 
     return (
         <div className="min-h-screen flex flex-col justify-between bg-[#0d1117] text-gray-300 items-center p-6 pt-24">
@@ -86,6 +89,18 @@ export default function Education() {
                     ))}
                 </div>
             </div>
+            <section className="bg-[#0d1117] text-white mt-9 w-3/4 py-8 px-4 md:px-12 rounded-2xl shadow-md border border-gray-700">
+                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-[#58a6ff]">
+                    🎓 Certifications
+                </h2>
+                <ul className="list-disc pl-6 space-y-2">
+                    {certificates.map((cert, index) => (
+                        <li key={index} className="text-base md:text-lg hover:text-[#c9d1d9] transition-all">
+                            {cert}
+                        </li>
+                    ))}
+                </ul>
+            </section>
 
             {/* Social Links at the Bottom */}
             <footer className="mt-auto w-full flex justify-center py-6">

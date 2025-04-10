@@ -29,47 +29,54 @@ export default function Projects() {
       <AnimatePresence>
         {selectedProject && (
           <motion.div
-            layoutId={`project-${selectedProject.id}`}
-            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4"
-            onClick={() => setSelectedProject(null)}
+          layoutId={`project-${selectedProject.id}`}
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 mt-20 z-50"
+          onClick={() => setSelectedProject(null)}
+        >
+          <motion.div
+            className="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-lg max-w-7xl w-full"
+            layout
+            onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
           >
-            <motion.div 
-              className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg max-w-2xl w-full"
-              layout
-              onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
-            >
-              <h3 className="text-2xl font-semibold mb-4">{selectedProject.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">{selectedProject.description}</p>
+            <section className="bg-gray-100 w-full dark:bg-gray-800 py-6 flex justify-center">
+              <div className="overflow-hidden bg-white dark:bg-gray-900 mx-2 flex flex-col lg:flex-row max-w-7xl w-full shadow-md rounded-xl">
+                
+                <div className="lg:w-1/2">
+                  {/* Add image or leave it blank */}
+                  {/* <div className="h-64 bg-cover lg:h-full" style={{ backgroundImage: "url('...')" }}></div> */}
 
-              <h4 className="text-lg font-semibold">Technologies Used:</h4>
-              <ul className="flex flex-wrap gap-2 mt-2 mb-4">
-                {selectedProject.technologies.map((tech, index) => (
-                  <li key={index} className="text-sm bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded">
-                    {tech}
-                  </li>
-                ))}
-              </ul>
-
-              <h4 className="text-lg font-semibold">Features:</h4>
-              <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mb-4">
-                {selectedProject.features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
-
-              <button
-                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
-                onClick={() => setSelectedProject(null)}
-              >
-                Close
-              </button>
-            </motion.div>
+                </div>
+        
+                <div className="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
+                  <h2 className="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
+                    Build Your New <span className="text-blue-500">Idea</span>
+                  </h2>
+        
+                  <p className="mt-4 text-gray-500 dark:text-gray-300">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quidem modi reprehenderit vitae exercitationem aliquid dolores ullam temporibus enim expedita aperiam
+                    mollitia iure consectetur dicta tenetur, porro consequuntur saepe accusantium consequatur.
+                  </p>
+        
+                  <div className="inline-flex w-full mt-6 sm:w-auto">
+                    <a
+                      href="#"
+                      className="inline-flex items-center justify-center w-full px-6 py-2 text-sm text-white duration-300 bg-gray-800 rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80"
+                    >
+                      Start Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
           </motion.div>
+        </motion.div>
+        
         )}
       </AnimatePresence>
 
       {/* Social Links - Kept Separate (Only Show When No Project is Selected) */}
-      {selectedProject===null && (
+      {selectedProject === null && (
         <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2">
           <SocialLinks />
         </div>
