@@ -1,4 +1,4 @@
-const projects = [
+const Projects_description = [
     {
       id: 1,
       title: "Attendance System with Emotion Recognition",
@@ -25,4 +25,4 @@ const projects = [
     }
   ];
   
-  export default projects;
+  export default Projects_description;
