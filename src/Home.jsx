@@ -43,71 +43,49 @@ export default function Home() {
           <div className="w-full md:w-1/3">
             <div className="bg-[#161b22] p-6 rounded-xl border border-[#30363d] sticky top-4">
 
+              <div
+                className="relative w-58 h-58 mx-auto rounded-full overflow-hidden border-4 border-white shadow-xl cursor-pointer transition-transform hover:scale-105 hover:shadow-2xl group"
+                onClick={handlePlay}
+              >
+                
+                <img src="./images/my_image.jpeg" alt="" />
+
+                {/* Play Icon Overlay on Hover */}
+                <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity rounded-full">            <svg
+                  className="w-12 h-12 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M6 4l12 6-12 6V4z" />
+                </svg>
+                </div>
+              </div>
 
 
-           
-        <div
-          className="relative w-58 h-58 rounded-full overflow-hidden border-4 border-white shadow-xl cursor-pointer transition-transform hover:scale-105 hover:shadow-2xl group"
-          onClick={handlePlay}
-        >
-          {/* <video
-            ref={videoRef}
-            className="w-full h-full object-cover rounded-full"
-            muted
-            playsInline
-            poster="./images/my_image.jpeg"
-          >
-            <source src="portfolio.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video> */}
-          <img src="./images/my_image.jpeg" alt="" />
-
-          {/* Play Icon Overlay on Hover */}
-          <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity rounded-full">            <svg
-              className="w-12 h-12 text-white"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M6 4l12 6-12 6V4z" />
-            </svg>
-          </div>
-        </div>
-      
-
-      {/* Fullscreen Modal */}
-      {isExpanded && (
-  <div
-    className="fixed inset-0 bg-[#0d1117]/90 backdrop-blur-sm flex items-start justify-center z-50 pt-24 px-6"
-    onClick={handleClose}
-  >
-    <div
-      className="rounded-xl bg-[#161b22] border border-[#30363d] shadow-lg p-3"
-      onClick={(e) => e.stopPropagation()} // Prevent closing on video click
-    >
-      <video
-        ref={videoRef}
-        className="w-[90vw] max-w-4xl max-h-[80vh] rounded-lg border border-[#21262d] shadow-[0_0_0_1px_#30363d] outline-none"
-        controls
-        autoPlay
-      >
-        <source src="portfolio.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-)}
-
-
-
-
-
-              
-
-
-
-
+              {/* Fullscreen Modal */}
+              {isExpanded && (
+                <div
+                  className="fixed inset-0 bg-[#0d1117]/90 backdrop-blur-sm flex items-start justify-center z-50 pt-24 px-6"
+                  onClick={handleClose}
+                >
+                  <div
+                    className="rounded-xl bg-[#161b22] border border-[#30363d] shadow-lg p-3"
+                    onClick={(e) => e.stopPropagation()} // Prevent closing on video click
+                  >
+                    <video
+                      ref={videoRef}
+                      className="w-[90vw] max-w-4xl max-h-[80vh] rounded-lg border border-[#21262d] shadow-[0_0_0_1px_#30363d] outline-none"
+                      controls
+                      autoPlay
+                    >
+                      <source src="portfolio.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              )}
               {/* Name and status */}
-              <h2 className="text-2xl font-bold text-[#f0f6fc] mb-1 text-center md:text-left">
+              <h2 className="text-2xl font-bold text-[#f0f6fc] my-2 text-center md:text-left">
                 Kiran shivanand totager
               </h2>
               <h3 className="text-lg text-[#8b949e] mb-4 text-center md:text-left">
@@ -127,9 +105,9 @@ export default function Home() {
               </h3>
 
               {/* Status badge */}
-              <div className="flex items-center mb-4 text-sm text-[#8b949e] justify-center md:justify-start">
+              <div className="flex items-center mb-4 text-sm text-[#8b949e] justify-start md:justify-start">
                 <span className="flex items-center">
-                  <span className="w-3 h-3 bg-[#3fb950] rounded-full mr-2"></span>
+                  <span className="w-3 h-3  bg-[#3fb950] rounded-full mr-2"></span>
                   Available for hire
                 </span>
               </div>
@@ -142,15 +120,38 @@ export default function Home() {
               {/* Stats */}
 
               {/* Quick links - reduced for space */}
-              <div className="space-y-2 text-sm">
-                <a href="kiran_S_T_2025.pdf" className="flex items-center text-[#8b949e] hover:text-[#58a6ff]">
-                  <svg className="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+              <div className="space-y-4 text-sm text-white bg-[#161b22] p-4 rounded-xl shadow-md max-w-xs mx-auto">
+                {/* Resume Button */}
+                <a
+                  href="/kiran_S_T_2025.pdf"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-[#58a6ff] bg-[#21262d] rounded-lg shadow-md hover:bg-[#30363d] transition-all duration-300 font-semibold tracking-wide"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg
+                    className="w-5 h-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                  >
                     <path d="M0 1.75A.75.75 0 01.75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0111.006 1h4.245a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75h-4.507a2.25 2.25 0 00-1.591.659l-.622.621a.75.75 0 01-1.06 0l-.622-.621A2.25 2.25 0 005.258 13H.75a.75.75 0 01-.75-.75V1.75z" />
                   </svg>
-                  <span>Resume</span>
+                  <span>Download Resume</span>
                 </a>
 
+                {/* Hire Me Button */}
+                <a
+                  href="mailto:tskiran5114@gmail.com?subject=Hiring%20Opportunity&body=Hi%20Kiran%2C%20We%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect."
+                  className="w-full gap-2 inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-green-700 transition-all duration-300 tracking-wide"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                  Hire Me
+                </a>
               </div>
+
+
 
             </div>
           </div>
@@ -172,7 +173,7 @@ export default function Home() {
                 </h2>
                 <p className="text-base mb-4">
                   Currently interning at
-                  <span className="text-[#f85149] font-medium"> L&T Technology Services (PES)</span>,
+                  <span className="text-[#58a6ff] font-medium"> L&T Technology Services (PES)</span>,
                   where I’m gaining practical experience in building robust backend systems.
                   I’ve been working on
                   <span className="text-[#58a6ff] font-medium"> RESTful APIs, JWT authentication, session management, and role-based access control</span>,
@@ -197,11 +198,11 @@ export default function Home() {
                 </p>
                 <p>
                   I'm a self-proclaimed
-                  <span className="text-[#ff7b72] font-medium"> lifelong learner</span>,
+                  <span className="text-[#58a6ff] font-medium"> lifelong learner</span>,
                   and I love growing and being part of
-                  <span className="text-[#ff7b72] font-medium"> significant tech innovations</span>.
+                  <span className="text-[#58a6ff] font-medium"> significant tech innovations</span>.
                   Whether working in a team or on my own, I enjoy creating
-                  <span className="text-[#ff7b72] font-medium"> ideas become functional solutions</span>
+                  <span className="text-[#58a6ff] font-medium"> ideas become functional solutions</span>
                   that have a real impact.
                 </p>
               </div>

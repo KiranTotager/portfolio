@@ -17,12 +17,13 @@ const Projects_description = [
     },
     {
       id: 3,
-      title: "JWT Auth API (Internship Project at L&T PES)",
+      title: "SPIC_NMS (Role-Based Access API, Internship Project at L&T PES)",
       description:
-        "Built a secure authentication backend for internal tools at L&T using FastAPI and JWT. Users receive session-specific tokens upon login, which are then verified across protected API routes. Also built token/session verification utilities for reuse across services. Integrated aiomysql for efficient async MySQL queries, reducing query lag by 35%. Focused on secure and scalable API design, ensuring tokens expire after session end and can’t be reused.",
+        "Designed and developed a role-based access control system using FastAPI and JWT for internal tools at L&T. Each user role (e.g., Admin, User) is assigned specific permissions, and session-based JWT tokens enforce access rights across all API endpoints. Implemented session validation utilities to ensure tokens are valid, and scoped to the user's role. Integrated aiomysql for async database operations, enhancing query performance by 35%. The system supports scalable, secure, and modular access control.",
       technologies: ["FastAPI", "Python", "JWT", "MySQL", "aiomysql"],
       github: null,
     }
+    
   ];
   
   export default Projects_description;
