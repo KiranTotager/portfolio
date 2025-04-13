@@ -43,14 +43,14 @@ export default function Home() {
           <div className="w-full md:w-1/3">
             <div className="bg-[#161b22] p-6 rounded-xl border border-[#30363d] sticky top-4">
 
-              <div
+              {/* <div
                 className="relative w-58 h-58 mx-auto rounded-full overflow-hidden border-4 border-white shadow-xl cursor-pointer transition-transform hover:scale-105 hover:shadow-2xl group"
                 onClick={handlePlay}
               >
                 
                 <img src="./images/my_image.jpeg" alt="" />
 
-                {/* Play Icon Overlay on Hover */}
+                
                 <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity rounded-full">            <svg
                   className="w-12 h-12 text-white"
                   fill="currentColor"
@@ -59,11 +59,11 @@ export default function Home() {
                   <path d="M6 4l12 6-12 6V4z" />
                 </svg>
                 </div>
-              </div>
+              </div>  */}
 
 
               {/* Fullscreen Modal */}
-              {isExpanded && (
+              {/* {isExpanded && (
                 <div
                   className="fixed inset-0 bg-[#0d1117]/90 backdrop-blur-sm flex items-start justify-center z-50 pt-24 px-6"
                   onClick={handleClose}
@@ -83,7 +83,14 @@ export default function Home() {
                     </video>
                   </div>
                 </div>
-              )}
+              )} */}
+              <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-white shadow-lg">
+                <img
+                  src="./images/my_image.jpeg"
+                  alt="My Avatar"
+                  className="w-full h-full object-cover"
+                />
+              </div>
               {/* Name and status */}
               <h2 className="text-2xl font-bold text-[#f0f6fc] my-2 text-center md:text-left">
                 Kiran shivanand totager
@@ -169,7 +176,7 @@ export default function Home() {
 
               <div className="px-6 py-6 font-mono text-[#8b949e] leading-relaxed">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#f0f6fc] mb-4">
-                  👨‍💻 Software Development Intern | CSE Student at GEC MH Halli
+                  👨‍💻 Software Development Intern
                 </h2>
                 <p className="text-base mb-4">
                   Currently interning at

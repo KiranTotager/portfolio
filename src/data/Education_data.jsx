@@ -15,6 +15,7 @@ export let Education_data=[
             "level": "BE",
             "college": "GEC MH Halli,tq&dist-hassan",
             "year": "2025",
+            "University":"Visvisvesvaraya technological university,belagavi",
             "CGPA": "8.3",
             "Branch": "Computer Science and Engineering"
           }
