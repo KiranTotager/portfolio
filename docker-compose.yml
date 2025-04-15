@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  portfolio:
+    image: kiranst/my_portfolio:apr14
+    ports:
+      - "80:80"
+    restart: always
