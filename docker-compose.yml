@@ -3,6 +3,7 @@ version: '3'
 services:
   portfolio:
     image: kiranst/my_portfolio:apr14
+    container_name: portfolio
     ports:
       - "80:80"
     restart: always
