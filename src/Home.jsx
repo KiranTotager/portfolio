@@ -3,8 +3,7 @@ import SocialLinks from './SocialLinks';
 import { Link } from 'react-router-dom';
 // import { useRef } from 'react';
 import { useRef, useState } from "react";
-
-
+import avatar from "./images/my_image.jpeg"
 export default function Home() {
   const videoRef = useRef(null);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -47,7 +46,7 @@ export default function Home() {
 
               <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-white shadow-lg">
                 <img
-                  src="./images/my_image.jpeg"
+                  src={avatar}
                   alt="My Avatar"
                   className="w-full h-full object-cover"
                 />
