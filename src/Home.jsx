@@ -43,47 +43,8 @@ export default function Home() {
           <div className="w-full md:w-1/3">
             <div className="bg-[#161b22] p-6 rounded-xl border border-[#30363d] sticky top-4">
 
-              {/* <div
-                className="relative w-58 h-58 mx-auto rounded-full overflow-hidden border-4 border-white shadow-xl cursor-pointer transition-transform hover:scale-105 hover:shadow-2xl group"
-                onClick={handlePlay}
-              >
-                
-                <img src="./images/my_image.jpeg" alt="" />
-
-                
-                <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity rounded-full">            <svg
-                  className="w-12 h-12 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M6 4l12 6-12 6V4z" />
-                </svg>
-                </div>
-              </div>  */}
 
 
-              {/* Fullscreen Modal */}
-              {/* {isExpanded && (
-                <div
-                  className="fixed inset-0 bg-[#0d1117]/90 backdrop-blur-sm flex items-start justify-center z-50 pt-24 px-6"
-                  onClick={handleClose}
-                >
-                  <div
-                    className="rounded-xl bg-[#161b22] border border-[#30363d] shadow-lg p-3"
-                    onClick={(e) => e.stopPropagation()} // Prevent closing on video click
-                  >
-                    <video
-                      ref={videoRef}
-                      className="w-[90vw] max-w-4xl max-h-[80vh] rounded-lg border border-[#21262d] shadow-[0_0_0_1px_#30363d] outline-none"
-                      controls
-                      autoPlay
-                    >
-                      <source src="portfolio.mp4" type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                </div>
-              )} */}
               <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-white shadow-lg">
                 <img
                   src="./images/my_image.jpeg"
@@ -121,7 +82,8 @@ export default function Home() {
 
               {/* Bio */}
               <p className="text-[#8b949e] text-sm mb-6 border-b border-[#30363d] pb-4">
-                👨‍💻 Computer Science & Engineering Student | Software Development Intern at L&T
+                👨‍💻 B.E. in Computer Science & Engineering, Class of 2025 | Ex-Software Development Intern at L&T
+
               </p>
 
               {/* Stats */}
@@ -130,7 +92,7 @@ export default function Home() {
               <div className="space-y-4 text-sm text-white bg-[#161b22] p-4 rounded-xl shadow-md max-w-xs mx-auto">
                 {/* Resume Button */}
                 <a
-                  href="/kiran_S_T_2025_april18.pdf"
+                  href="/Kiran_Shivanand_Totager_Jresume.pdf"
                   className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-[#58a6ff] bg-[#21262d] rounded-lg shadow-md hover:bg-[#30363d] transition-all duration-300 font-semibold tracking-wide"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -176,43 +138,36 @@ export default function Home() {
 
               <div className="px-6 py-6 font-mono text-[#8b949e] leading-relaxed">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#f0f6fc] mb-4">
-                  👨‍💻 Software Development Intern
+                  👨‍💻 Former Software Development Intern @ L&T Technology Services (PES)
                 </h2>
                 <p className="text-base mb-4">
-                  Currently interning at
-                  <span className="text-[#58a6ff] font-medium"> L&T Technology Services (PES)</span>,
-                  where I’m gaining practical experience in building robust backend systems.
-                  I’ve been working on
-                  <span className="text-[#58a6ff] font-medium"> RESTful APIs, JWT authentication, session management, and role-based access control</span>,
-                  while also exploring
-                  <span className="text-[#58a6ff] font-medium"> frontend development using React.js</span>.
+                  I’m a 2025 Computer Science & Engineering graduate with practical industry exposure through my internship at
+                  <span className="text-[#58a6ff] font-medium"> L&T Technology Services (PES)</span>. During my time there, I worked on building scalable backend systems using
+                  <span className="text-[#58a6ff] font-medium"> Spring Boot, FastAPI, and MySQL</span>. I implemented
+                  <span className="text-[#58a6ff] font-medium"> JWT authentication, session management, and role-based access control</span>, and optimized performance using
+                  <span className="text-[#58a6ff] font-medium"> aiomysql and Redis</span>.
                 </p>
                 <p className="mb-4">
-                  I am comfortable with
-                  <span className="text-[#e3b341] font-medium"> Python, Java, C, JavaScript, HTML, CSS, MySQL</span>,
-                  and have working knowledge of
-                  <span className="text-[#e3b341] font-medium"> FastAPI and Docker</span>.
-                  My favorite project was to create a
-                  <span className="text-[#8b949e] font-medium"> face recognition-based attendance system</span>
-                  using DeepFace and combine it with a real-time MySQL database.
+                  On the frontend side, I contributed by building dynamic UI components using
+                  <span className="text-[#e3b341] font-medium"> React.js and Tailwind CSS</span>. I also integrated
+                  <span className="text-[#e3b341] font-medium"> SonarQube for static code analysis</span> and worked with
+                  <span className="text-[#e3b341] font-medium"> Jenkins pipelines and Docker</span> to automate the CI/CD process. I followed best practices around
+                  <span className="text-[#e3b341] font-medium"> version control, API security, and scalable database design</span>.
                 </p>
                 <p className="mb-4">
-                  I have a strong background in
-                  <span className="text-[#d2a8ff] font-medium"> data structures, problem-solving, and software development principles</span>,
-                  and have solved more than
-                  <span className="text-[#d2a8ff] font-medium"> 50+ problems on LeetCode</span>
-                  to strengthen my logic-crafting ability.
+                  I’m proficient in
+                  <span className="text-[#d2a8ff] font-medium"> Java, Python, C, JavaScript, HTML, CSS, MySQL</span>, with practical experience in
+                  <span className="text-[#d2a8ff] font-medium"> Spring Boot, Spring Security, Spring Data JPA, FastAPI, Redis, and Docker</span>. One of my favorite projects involved building a
+                  <span className="text-[#8b949e] font-medium"> face recognition-based attendance system</span> using DeepFace and Tkinter integrated with MySQL.
                 </p>
                 <p>
-                  I'm a self-proclaimed
-                  <span className="text-[#58a6ff] font-medium"> lifelong learner</span>,
-                  and I love growing and being part of
-                  <span className="text-[#58a6ff] font-medium"> significant tech innovations</span>.
-                  Whether working in a team or on my own, I enjoy creating
-                  <span className="text-[#58a6ff] font-medium"> ideas become functional solutions</span>
-                  that have a real impact.
+                  I’m passionate about
+                  <span className="text-[#58a6ff] font-medium"> clean code, scalable architecture, and real-world problem solving</span>. I’ve solved over
+                  <span className="text-[#58a6ff] font-medium"> 65+ LeetCode problems</span> and continuously strive to improve my
+                  <span className="text-[#58a6ff] font-medium"> data structures, algorithms, and system design skills</span>.
                 </p>
               </div>
+
 
 
             </div>

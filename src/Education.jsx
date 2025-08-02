@@ -8,10 +8,10 @@ export default function Education() {
     // Define your skills here
     const skills = [
         "Python", "Java", "JavaScript", "React.js", "FastAPI", "MySQL",
-        "DSA", "numpy","pandas","matplotlib","seaborn", "tailwind css"
+        "DSA", "tailwind css","Spring boot","Sring Data JPA","Spring security","REST API"
     ];
     let Tools = [
-        "Git", "GitHub", "Postman", "docker", "jupyter notebook", "Linux", "pycharm","AWS cloud","CI/CD pipeline(Jenkins)"
+        "Git", "GitHub", "Postman", "docker", "jupyter notebook", "Linux", "pycharm","AWS cloud","CI/CD pipeline(Jenkins)","Sonar Cloud","Sonar Lint","Sonar Qube","Redis"
     ]
     let certificates = [
         "core java-udemy", "datastructures-NPTEL", "data sceince-internshala"
