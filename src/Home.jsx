@@ -3,7 +3,7 @@ import SocialLinks from './SocialLinks';
 import { Link } from 'react-router-dom';
 // import { useRef } from 'react';
 import { useRef, useState } from "react";
-import avatar from "./images/my_image.jpeg"
+import avatar from "/images/my_image.jpeg"
 export default function Home() {
   const videoRef = useRef(null);
   const [isExpanded, setIsExpanded] = useState(false);
