@@ -91,7 +91,8 @@ export default function Home() {
               <div className="space-y-4 text-sm text-white bg-[#161b22] p-4 rounded-xl shadow-md max-w-xs mx-auto">
                 {/* Resume Button */}
                 <a
-                  href="/Kiran_Shivanand_Totager_Jresume.pdf"
+                  href={`${import.meta.env.BASE_URL}Kiran_Shivanand_Totager_Jresume.pdf
+`}
                   className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-[#58a6ff] bg-[#21262d] rounded-lg shadow-md hover:bg-[#30363d] transition-all duration-300 font-semibold tracking-wide"
                   target="_blank"
                   rel="noopener noreferrer"
